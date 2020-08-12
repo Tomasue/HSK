@@ -1,0 +1,15 @@
+main {
+    flex: 1 0 auto;
+    height: calc(100% - 114px);
+}
+
+body:not(.auth) header, body:not(.auth) main, body:not(.auth) footer {
+    padding-left: 300px;
+}
+
+@media only screen and (max-width: 992px) {
+    header, main, footer {
+        padding-left: 0 !important;
+    }
+}
+

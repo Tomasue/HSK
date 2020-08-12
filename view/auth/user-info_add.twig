@@ -1,0 +1,67 @@
+{% extends 'template/base.twig' %}
+{% set title = 'Lists' %}
+{% block styles %}
+    <link href="/css/materialize.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/materializeaddons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    {% include 'template/header.twig' %}
+
+    <main>
+        <div class="section" style="padding-top: 165px;">
+            <div class="container">
+                <div class="row">
+                    <form class="col s12" method="post">
+                        {% for d in data %}
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="birth_date" name="birth_date" type="date" class="validate" placeholder="{{ d.birth_date }}">
+                                <label for="birth_date">Fødsels dato</label>
+                                <span class="helper-text" data-error="wrong" data-success="right"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="address" name="address" type="text" class="validate" placeholder="{{ d.address }}">
+                                <label for="address">Adresse</label>
+                                <span class="helper-text" data-error="wrong" data-success="right"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="number" name="number" type="number" class="validate" placeholder="{{ d.number }}">
+                                <label for="number">Nummer</label>
+                                <span class="helper-text" data-error="wrong" data-success="right"></span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <div class="fixed-action-btn">
+                            <button class="btn-floating waves-effect btn-large hsk-red">
+                                <i class="material-icons">save</i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {% include 'template/footer-online.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/general.js"></script>
+{% endblock %}
+
+
+
+
+
+
+

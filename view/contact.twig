@@ -1,0 +1,79 @@
+{% extends 'template/base.twig' %}
+{% set title = 'kontakt' %}
+{% block styles %}
+    <link href="/css/about.css" rel="stylesheet" type="text/css">
+    <link href="/css/nav.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+    <div class="hsk-red">
+        {% include 'template/nav.twig' %}
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 center">
+                <h1>Kontakt informasjon</h1>
+                <div class="row center">
+                    <p class="col s6"><span style="font-weight: bold;">Adress</span> <br> PB 1046, 3204 Sandefjord</p>
+                    <p class="col s6"><span style="font-weight: bold;">Phone</span> <br> 48112138</p>
+                </div>
+                <div class="row center">
+                    <p class="col s6"><span style="font-weight: bold;">E-post</span> <br> post@haukerodskolekorps.no</p>
+                    <p class="col s6"><span style="font-weight: bold;">Org.Nr</span> <br> 971317558</p>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <h2 class="flow-text" style="margin: 0 0 15px 0; font-weight: bold;">Du kan sende oss en mail med formen under eller sende til <a class="hsk-red-text" href="mailto: post@haukrødskolekorps.no" style="text-decoration: underline #8b1014;">post@haukerodskolekorps.no</a></h2>
+            <div class="row">
+                <form class="col s12" method="post">
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="name" name="name" type="text" >
+                            <label for="name">Name (required)</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="email" name="email" type="email" class="validate">
+                            <label for="email">Email (required)</label>
+                            <span class="helper-text" data-error="wrong" data-success="right"></span>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <input id="number" name="number" type="number" class="validate">
+                            <label for="number">Phone (optional)</label>
+                            <span class="helper-text" data-error="wrong" data-success="right"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="subject" name="subject" type="text">
+                            <label for="subject">Subject</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="comment" name="comment" type="text" class="materialize-textarea"></textarea>
+                            <label for="comment">Your comment (required)</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="btn-small waves-effect col s12 hsk-red">
+                            <i class="material-icons">send</i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {% include 'template/footer.twig' %}
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="/js/general.js"></script>
+{% endblock %}
+

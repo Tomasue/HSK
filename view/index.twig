@@ -1,0 +1,25 @@
+{% extends 'template/base.twig' %}
+{% set title = 'Hjem' %}
+{% block styles %}
+    <link href="/css/index.css" rel="stylesheet" type="text/css">
+	<link href="/css/nav.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+ 	<div class="hero">
+		{% include 'template/nav.twig'%}
+		<div class="hero-info">
+			<h1 class="hero-text">Vil du spille med oss?</h1>
+			<a href="/info" class="white-text hsk-red hero-button btn-large">Lær mer</a>
+		</div>
+		<span class="arrow arrow-bottom"></span>
+	</div>
+	
+    
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+

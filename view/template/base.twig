@@ -1,0 +1,33 @@
+{% set sitename = 'HSK' %}
+<!Doctype html>
+<html lang="en">
+    <head>
+        <title>{{ sitename }} - {{ title }}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/global.css">
+        <link href="/css/materialize.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+        {{ block('styles') }}
+    </head>
+    <body>
+        
+        {{ block('content') }}
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script type="text/javascript" src="/js/general.js"></script>
+        <script>
+            let loc = window.location.pathname;
+            let locations = loc.split('/')[1];
+            if (locations === '') {
+                $('#home').addClass('active-nav')
+            } else {
+                $('#' + locations).addClass('active-nav')
+            }
+        </script>
+        {{ block('scripts') }}
+
+    </body>
+</html>

@@ -1,0 +1,69 @@
+{% extends 'template/base.twig' %}
+{% set title = 'Legg til foresatt' %}
+{% block styles %}
+    <link href="/css/materialize.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/materializeaddons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    {% include 'template/header.twig' %}
+
+    <main>
+        <div class="section" style="padding-top: 165px;">
+            <div class="container">
+                <div class="row">
+                    <form class="col s12" method="post">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select id="band" name="band">
+                                    <option value="0">Hoved</option>
+                                    <option value="1">Junior</option>
+                                    <option value="2">Aspirant</option>
+                                </select>
+                                <label for="band">Korps</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="start" name="start" type="date">
+                                <label for="start">Start Dato</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="end" name="end" type="date" >
+                                <label for="end">Slutt Dato</label>
+                            </div>
+                        </div>
+
+                        <div class="fixed-action-btn">
+                            <button class="btn-floating waves-effect btn-large hsk-red">
+                                <i class="material-icons">save</i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {% include 'template/footer-online.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/general.js"></script>
+{% endblock %}
+
+
+
+
+
+
+

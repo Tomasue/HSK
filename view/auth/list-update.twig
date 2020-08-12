@@ -1,0 +1,89 @@
+{% extends 'template/base.twig' %}
+{% set title = 'Lists' %}
+{% block styles %}
+    <link href="/css/materialize.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/materializeaddons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    {% include 'template/header.twig' %}
+
+    <main>
+        <div class="section" style="padding-top: 165px;">
+            <div class="container">
+                {% for i in info %}
+                <div class="row">
+                    <form class="col s12" method="post">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select name="band" id="band" class="validate">
+                                    <option value="0" {% if i.band == 0 %} selected {% endif %}>Hoved</option>
+                                    <option value="1" {% if i.band == 1 %} selected {% endif %}>Junior</option>
+                                    <option value="2" {% if i.band == 2 %} selected {% endif %}>Aspirant</option>
+                                </select>
+                                <label for="band">Hvilket korps spiller musikanten i?</label>
+                                <span class="helper-text" data-error="wrong" data-success="right"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="name" name="name" type="text" class="validate" value="{{ i.name }}">
+                                <label for="name">Musikant navn</label>
+                                <span class="helper-text" data-error="wrong" data-success="right"></span>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="birth_date" name="birth_date" type="date" class="validate" value="{{ i.birth_date|date('Y-m-d') }}">
+                                <label for="birth_date">Fødsels dato</label>
+                                <span class="helper-text" data-error="wrong" data-success="right"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="address" name="address" type="text" class="validate" value="{{ i.address }}">
+                                <label for="address">Adresse</label>
+                                <span class="helper-text" data-error="wrong" data-success="right"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="email" name="email" type="email" class="validate" value="{{ i.email }}">
+                                <label for="email">Email</label>
+                                <span class="helper-text" data-error="wrong" data-success="right"></span>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input id="number" name="number" type="number" class="validate" value="{{ i.number }}">
+                                <label for="number">Nummer</label>
+                                <span class="helper-text" data-error="wrong" data-success="right"></span>
+                            </div>
+                        </div>
+                        <div class="fixed-action-btn">
+                            <button class="btn-floating waves-effect btn-large hsk-red">
+                                <i class="material-icons">save</i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+
+    {% include 'template/footer-online.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/general.js"></script>
+{% endblock %}
+
+
+
+
+
+
+

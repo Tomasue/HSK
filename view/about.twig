@@ -1,0 +1,172 @@
+{% extends 'template/base.twig' %}
+{% set title = 'Hjem' %}
+{% block styles %}
+    <link href="/css/about.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/nav.css">
+{% endblock %}
+
+{% block content %}
+
+    <div class="hsk-red" style="border-bottom: 2px solid black;">
+        {% include 'template/nav.twig'%}
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12" style="padding: 0;">
+                <ul class="tabs z-depth-1 hsk-red" style="margin: 10px 0 0 0;">
+                    <li class="tab col s3"><a href="#omoss" class="white-text">Om Hsk</a></li>
+                    <li class="tab col s3"><a href="#styre" class="white-text">Styre- og komiteliste</a></li>
+                    <li class="tab col s3"><a href="#vedtekter" class="white-text">Vedtekter</a></li>
+                    <li class="tab col s3"><a href="#support" class="white-text">Sponsore/støtte</a></li>
+                </ul>
+            </div>
+            <div id="omoss" class="col s12">
+                <h2 class="hsk-red-text">Om haukrød skolekorps</h2>
+                <div class="row" style="border-bottom: 2px solid black; padding-bottom: 10px;">
+                    <img class="col s6" src="/img/omoss.jpg" alt="korps" style="">
+                    <div class="col s6">
+                        <h3>Hvem er vi?</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti exercitationem iure laudantium nisi, non perferendis perspiciatis quae totam veniam voluptate.</p>
+                        <h3>Hva står <span class="hsk-red-text">HSK</span> får?</h3>
+                        <ul class="browser-default" style="padding-left: 20px;">
+                            <li>H: Holdning</li>
+                            <li>S: Samhold</li>
+                            <lI>K: Kvalitet</lI>
+                        </ul>
+                        <h4 class="">Noe du lurer på <br><a class="btn-small hsk-red ">Ta kontakt</a></h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <div class="row">
+                            <img src="/img/omoss2.jpg" alt="korps" class="col s6">
+                            <div class="col s6">
+                                <h4 style="margin: 0;">Random ting</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, perferendis?</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="row">
+                            <img src="/img/omoss3.jpg" alt="korps" class="col s6">
+                            <div class="col s6">
+                                <h4 style="margin: 0;">En givende fritid</h4>
+                                <p>Alle ser byens korps når de marsjerer 17.mai, men dette er bare «toppen av isjfellet». Korps er så mye mer enn det! Haukerød Skolekorps satser på å tilby en kvalitetsbevisst musikalsk opplevelse for barn og ungdom i alderen 8 – 19 år.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div id="styre" class="col s12">
+                <ul class="collapsible expandable">
+                    <li>
+                        <div class="collapsible-header">Styret</div>
+                        <div class="collapsible-body">
+                            <table class="striped">
+                                <thead>
+                                <tr>
+                                    <th>Role</th>
+                                    <th>Navn</th>
+                                    <th>TLF</th>
+                                    <th>Mail</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Leder</td>
+                                        <td>Thorny Cesilie Bie Andersen</td>
+                                        <td>48 11 21 38</td>
+                                        <td>leder@haukerodskolekorps.no</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Korpsleder</td>
+                                        <td>Per Solberg</td>
+                                        <td></td>
+                                        <td>korpsleder@haukerodskolekorps.no</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Valgkomiteen</div>
+                        <div class="collapsible-body">
+                            <table class="striped">
+                                <thead>
+                                <tr>
+                                    <th>Role</th>
+                                    <th>Navn</th>
+                                    <th>TLF</th>
+                                    <th>Mail</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Leder</td>
+                                    <td>Erik Rastad</td>
+                                    <td>93 24 76 60</td>
+                                    <td>erik@rastad.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Medlem</td>
+                                    <td>Vibeke Lillehammer Larsen</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Dirigent</div>
+                        <div class="collapsible-body">
+                            <table class="striped">
+                                <thead>
+                                <tr>
+                                    <th>Korps</th>
+                                    <th>Navn</th>
+                                    <th>TLF</th>
+                                    <th>Mail</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Hoved</td>
+                                    <td>Christopher W. Røedvang</td>
+                                    <td></td>
+                                    <td>kornettist@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Junior og aspirant</td>
+                                    <td>Ketil Klavenes</td>
+                                    <td>91 60 32 76</td>
+                                    <td>ketilklavenes@gmail.com</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="vedtekter" class="col s12">
+                <a href="http://www.haukerodskolekorps.no/wp-content/uploads/2014/01/2017_02_28-Vedtekter-HSK-1.pdf">2017_02_28 Vedteker HSK</a>
+            </div>
+            <div id="support" class="col s12">
+                <div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    {% include 'template/footer.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+

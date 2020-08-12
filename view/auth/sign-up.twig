@@ -1,0 +1,49 @@
+{% extends 'template/base.twig' %}
+{% set title = 'sign in' %}
+{% block styles %}
+    <link href="/css/materializeaddons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/css/auth.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div class="auth-back valign-wrapper">
+        <div class="container">
+            <div class="row login center z-depth-2">
+                <form class="col s12" method="post" action="">
+                    <h2>Sign Up</h2>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="email" name="email" placeholder="">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" name="name" placeholder="">
+                            <label for="name">Navn</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input type="password" name="password" placeholder="">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input type="password" name="password2" placeholder="">
+                            <label for="password2">Repeat password</label>
+                        </div>
+                    </div>
+                    <button class="btn-large waves-effect">Continue</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+
+

@@ -1,0 +1,80 @@
+header {
+	width: 1500px;
+	height: 130px;
+	background-color: transparent;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+}
+
+header .logo {
+	text-align: left;
+	padding: 2px;
+	height: 125px;
+	animation: fadeInAndUp 2s forwards;
+}
+
+.name {
+	display: none;
+	float: left;
+	color: white;
+}
+
+nav {
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	height: 60px;
+	line-height: 60px;
+	width: 100%;
+}
+
+nav a {
+	color: #fff;
+	background: black;
+	display: inline-block;
+	padding: 10px 15px;
+	line-height: 1;
+	text-decoration: none;
+	border-radius: 2px;
+	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.3);
+	opacity: 0;
+	transition: 0.3s ease;
+}
+
+a:nth-child(5) {
+	margin-right: 5px;
+}
+
+a:hover {
+	box-shadow: 0 0 0 1px #fff;
+}
+
+nav a {
+	-webkit-animation: fadeInAndUpBig 1s forwards;
+	animation: fadeInAndUpBig 1s forwards;
+}
+
+nav a:nth-child(1) {
+	-webkit-animation-delay: 1.0s;
+	animation-delay: 1.0s;
+}
+
+nav a:nth-child(2) {
+	-webkit-animation-delay: 1.1s;
+	animation-delay: 1.1s;
+}
+nav a:nth-child(3) {
+	-webkit-animation-delay: 1.2s;
+	animation-delay: 1.2s;
+}
+nav a:nth-child(4) {
+	-webkit-animation-delay: 1.3s;
+	animation-delay: 1.3s;
+}
+nav a:nth-child(5) {
+	-webkit-animation-delay: 1.4s;
+	animation-delay: 1.4s;
+}

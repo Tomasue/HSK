@@ -1,0 +1,147 @@
+{% extends 'template/base.twig' %}
+{% set title = 'Hjem' %}
+{% block styles %}
+    <link href="/css/about.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/nav.css">
+{% endblock %}
+
+{% block content %}
+
+    <div class="hsk-red z-depth-2" style="border-bottom: 2px solid black;">
+        {% include 'template/nav.twig'%}
+    </div>
+    <div class="container">
+        <div class="row" style="padding: 10px 0 0 0 ">
+            <div class="col s12">
+                <ul class="tabs hsk-red z-depth-1">
+                    <li class="tab col s4"><a href="#play" class="white-text">Lyst til å spille med oss?</a></li>
+                    <li class="tab col s4"><a href="#loppemarked" class="white-text">Loppemarkede</a></li>
+                    <li class="tab col s4"><a href="#parents" class="white-text">Info til foreldre</a></li>
+                </ul>
+            </div>
+            <div id="play" class="col s12">
+                <div>
+                    <h3>Har du lyst til å spille i HSK?</h3>
+                    <p>Er du mellom 8 og 12 år og tilhører Haukerød, Fevang eller Krokemoa skolekrets kan du begynne i Haukerød Skolekorps!</p>
+                    <h3>Hvor og når øver vi?</h3>
+                    <p>Alle øvelsene er på Haukerød skole.<br>
+                        Aspiranter øver tirsdager fra kl. 17:00 – 18:30, og har i tillegg enetimer med instruksjon.<br>
+                        Juniorer øver torsdager fra 17:00 – 18:30, og de har også enetimer med instruksjon.<br>
+                        Hovedkorpset øver tirsdager og torsdager fra 18:30 – 20:30<br>
+                        Første året i hovedkorpset har man også enetimer, som regel på tirsdager og torsdager.
+                    </p>
+                </div>
+            </div>
+            <div id="loppemarked" class="col s12">
+                <div class="row">
+                    <div class="col s12">
+                        <ul class="tabs hsk-red z-depth-1" style="margin-top: 4px;">
+                            <li class="tab col s4"><a href="#geninfo" class="white-text">Generel informasjon</a></li>
+                            <li class="tab col s4"><a href="#delinfo" class="white-text">Informasjon om hente/levere</a> </li>
+                            <li class="tab col s4"><a href="#lopinfo" class="white-text">Loppeinfo til foresatte og musikanter</a> </li>
+                        </ul>
+                    </div>
+                    <div id="geninfo" class="col s12">
+                        <div class="row">
+                            <div class="col s12">
+                                <h3>Loppemarked</h3>
+                                <p>HAUKERØD SKOLE<br>Raveien 220, 3224 Sandefjord<br>
+                                    LØRDAG  25. April  KL. 10:00 – 15:00<br>
+                                    SØNDAG 26. April KL. 12:00 – 15:00<br>
+                                    Parkering på grusveien innerst i Runarveien (bak skolen). Følg skilting.</p>
+                            </div>
+                            <div class="col s12">
+                                <h3>Hva finner du på loppemarkede:</h3>
+                            </div>
+                            <div class="col s6">
+                                <h5>Ting og tang</h5>
+                                <p style="min-height: 80px;">Vi har en stor avdeling med Ting og tang hvor du finner blant annet: Kjøkkenustyr, serviser, julpynt og mye mer. I alle mulige former og farger. Her får du masse får pengene om du trenger noe nytt.</p>
+                            </div>
+                            <div class="col s6">
+                                <h5>Leker</h5>
+                                <p style="min-height: 80px;">I leker avdelingen finner du masse fint som du kan kjøpe til barnebarna.</p>
+                            </div>
+                            <div class="col s6">
+                                <h5>Vesker</h5>
+                                <p style="min-height: 80px;">Går aldri av moten, og her finner du både selskapsvesker, håndvesker, nett og kofferter.</p>
+                            </div>
+                            <div class="col s6">
+                                <h5>Sportsutstyr</h5>
+                                <p style="min-height: 80px;">Kan være kjekt å kjøpe brukt, hvis barna stadig vekk vokser fra det de har. Her finner du både vintersportsutstyr og sykler!</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div id="delinfo" class="col s12">
+                        <div>
+                            <h4>Loppemarked 25. og 26. April 2020</h4>
+                            <p>Fra og med onsdag 25. mars tar vi i mot lopper i Port C i Komplett Arena (fotballstadion) to ganger i uken: tirsdag og torsdag fra kl 18:00 til 20:00. Siste dag for levering er tirsdag 21.April.</p>
+                            <p style="padding: 10px 0;">I denne perioden kan vi også hente lopper om du ikke kan levere selv. Ring 45 00 96 92 mandag og onsdag 18-20 for å avtale henting.<br>
+                                Innkjøring fra parkeringen ved Meny. Se etter skilt.</p>
+                            <p style="padding: 5px 0;">Dersom du har lopper til oss utenom disse ukene, kan du ta kontakt for å lage en avtale for levering. Ring 45 00 96 92 eller sende mail til <a href="mailto:post@haukerodskolekorps.no">post@haukerodskolekorps.no</a></p>
+                            <p style="padding: 5px 0;">Har du større mengder lopper eller dødsbo. Så kan du også ta kontakt med oss.</p>
+                            <h5 style="padding: 5px 0;">Vi tar i mot:</h5>
+                            <ul class="browser-default" style="margin-left: 20px;">
+                                <li>Klær/Vesker</li>
+                                <li>Leker</li>
+                                <li>Bøker</li>
+                                <li>Ting og tang</li>
+                            </ul>
+                            <h5 style="padding: 10px 0;">Vi tar <span class="red-text" style="font-weight: bold;">IKKE</span> i mot:</h5>
+                            <ul class="browser-default" style="margin-left: 20px;">
+                                <li>Møbler</li>
+                                <li>Leksikon</li>
+                                <li>Kjøkkeninnredning og baderomsinnredning</li>
+                                <li>Kjøle-/fryseskap, ovner, mikrobølgeovner, vaskermaskiner eller tørketromler</li>
+                                <li>«Tykke» TVer, datamaskiner, skrivere</li>
+                                <li>Madrasser og dyner</li>
+                            </ul>
+                            <h3>Kart til lagret ↓</h3>
+                            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1bghUaPmHygVlff28-5Rpp8TiUR0a3QRX" width="640" height="440"></iframe>
+                        </div>
+                    </div>
+                    <div id="lopinfo" class="col s12">
+                        <div>
+                            <h4>Vakter i forbindelse med loppa</h4>
+                        </div>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header">1. Innsamling av lopper - kjøreteam og lagervakter</div>
+                                <div class="collapsible-body"><p style="padding: 4px;">Vi begynner å samle inn lopper på tirsdager og torsdager 6-8 uker før loppemarkedet. Det blir satt opp to kjøreteam hver gang, og hvert team har 5-6 hentinger. Det kommer ut lister med hvem som står på kjøreteam, og hvem som er vakt på lageret. Personen som står øverst på hvert team, har ansvar for å stille med henger/stor bil. Korpsets henger kan benyttes etter avtale, dersom ingen på kjøreteamet har mulighet til å stille med dette.</p>
+                                    <p style="padding: 4px;">De som skal kjøre møter opp på Haukerød skole kl 17:30, der de får utlevert lister med henteadresser. Loppene skal leveres på loppelageret i Komplett Arena Port C (mot Ringveien).</p>
+                                    <p style="padding: 4px;">Lagervaktene møter på loppelageret kl 17:40 for klargjøring for mottak av lopper. Når loppene ankommer skal de sorteres etter hvilken avdeling de hører til. Loppene lagres på pall og plastes, for lettvint utkjøring på loppemarkedet. Lageret stenges kl 20:05. Det er viktig at det er folk på lageret i hele åpningstiden.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header">2. Vakter under selve loppemarkedet</div>
+                                <div class="collapsible-body"><p style="padding: 4px;">Under loppemarkedet er vi avhengig av at alle som kan stiller opp. Dette er vår viktigste inntektskilde, og det er viktig at vi har nok hender for å få det til å bli kjempebra! Hver familie blir i utgangspunktet satt opp to av dagene. Dersom man vet at man ikke kan stille så ønsker vi beskjed så tidlig som mulig, så vi vet det før vaktlistene settes opp. Vi trenger folk på alle avdelingene, og dersom man kun kan noen timer, så er det bedre enn ingenting! Vi trenger også riggevakter på fredagen og ryddeteam på søndagen – alle med søndagsvakt må dog hjelpe til fram til vi er ferdige å rydde. På den måten blir vi fortere ferdig, og vi slipper at noen få må være igjen til langt på kveld.</p>
+                                    <p style="padding: 4px;">Før loppemarkedet går det ut lister der man kan ønske seg vakter på gitte avdelinger. Ferdige vaktlister kommer så ut når det nærmer seg loppemarkedet. Det er viktig at alle ser nøye gjennom vaktlistene slik at man vet hvor man skal være og når man skal møte opp.</p>
+                                        <p style="padding: 4px;">Hver avdeling har en avdelingsleder som vaktene skal forholde seg til. Avdelingslederne er ansvarlig for info til vaktene.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="parents" class="col s12">
+                <div>
+                    <h3>Hva slags tilbud er skolekrops?</h3>
+                    <p>Musikk er viktig for følelsene våre. Å spille musikke oppleves helt annerledes enn å lytte til musikk.
+                       <br> Å spille sammen med andre bygger sosiale egenskaper som: kommunikasjon, samarbeid, initiativ, selvdisiplin, og bidrar til en positiv selvfølelse.
+                       <br> Forskning viser at ferdigheter i lesing, skriving og matematikk forbedrer seg når barn får systematisk opplæring i musikk og andre kunstformer. Det skjer en viktig utviklingsprosess når barna lærer seg å spille et instrument.
+                        <br> I korps får man opplevelser og vennskap som varer livet ut.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {% include 'template/footer.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+

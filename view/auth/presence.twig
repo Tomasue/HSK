@@ -1,0 +1,89 @@
+{% extends 'template/base.twig' %}
+{% set title = 'Presence' %}
+{% block styles %}
+    <link href="/css/materializeaddons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    {% include 'template/header.twig' %}
+
+    <main>
+        <div class="section">
+            <div class="container">
+                <ul class="collapsible popout">
+                    <li>
+                        <div class="collapsible-header" tabindex="0">Hoved</div>
+                        <div class="collapsible-body" style="">
+                            <form>
+                                <ul class="collection with-header">
+                                    <li class="collection-header">Fravær</li>
+                                {% for r in hoved %}
+
+                                    <li class="collection-item"><label><input type="checkbox"><span>{{ r.name }}</span></label></li>
+
+                                {% endfor %}
+                                </ul>
+                                <button class="btn-small hsk-red">Update</button>
+                            </form>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header" tabindex="0">Junior</div>
+                        <div class="collapsible-body" style="">
+                            <form>
+                                <ul class="collection with-header">
+                                    <li class="collection-header">Fravær</li>
+                                    {% for r in junior %}
+
+                                        <li class="collection-item"><label><input type="checkbox"><span>{{ r.name }}</span></label></li>
+
+                                    {% endfor %}
+                                </ul>
+                                <button class="btn-small hsk-red">Update</button>
+                            </form>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header" tabindex="0">Aspirant</div>
+                        <div class="collapsible-body" style="">
+                            <form>
+                                <ul class="collection with-header">
+                                    <li class="collection-header">Fravær</li>
+                                    {% for r in aspirant %}
+
+                                        <li class="collection-item"><label><input type="checkbox"><span>{{ r.name }}</span></label></li>
+
+                                    {% endfor %}
+                                </ul>
+                                <button class="btn-small hsk-red">Update</button>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+                <div class="fixed-action-btn">
+                    <a class="btn-floating waves-effect btn-large hsk-red" href="/admin/lists/add-list">
+                        <i class="material-icons">add</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {% include 'template/footer-online.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/general.js"></script>
+
+{% endblock %}
+
+
+
+
+
+
+

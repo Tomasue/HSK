@@ -1,0 +1,2 @@
+SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: 'Nygårdsveien 74d' for column `hsk`.`users`.`birth_date` at row 1
+SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '92402167' for column `hsk`.`users`.`birth_date` at row 1

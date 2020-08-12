@@ -1,0 +1,24 @@
+{% extends 'template/base.twig' %}
+{% set title = 'Hjem' %}
+{% block styles %}
+    <link href="/css/calendar.css" rel="stylesheet" type="text/css">
+    <link href="/css/nav.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+    <div class="hsk-red">
+        {% include 'template/nav.twig'%}
+    </div>
+
+
+
+{% endblock %}
+
+{% block scripts %}
+
+
+    <script type="text/javascript" src="/js/general.js"></script>
+
+{% endblock %}
+

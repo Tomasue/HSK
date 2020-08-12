@@ -1,0 +1,62 @@
+{% extends 'template/base.twig' %}
+{% set title = 'Add post' %}
+{% block styles %}
+    <link href="/css/materialize.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/materializeaddons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    {% include 'template/header.twig' %}
+
+    <main>
+        <div class="section" style="padding-top: 165px;">
+            <div class="container">
+                <div class="row">
+                    <form class="col s12" method="post">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select name="band" id="band" class="">
+                                    <option value="0">Everyone</option>
+                                    <option value="1">Hoved</option>
+                                    <option value="2">Junior</option>
+                                    <option value="3">Aspirant</option>
+                                </select>
+                                <label for="band">Hvem skal se posten?</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="title" name="title" type="text" class="validate">
+                                <label for="title">Title</label>
+                                <span class="helper-text" data-error="wrong" data-success="right"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="description" maxlength="350" name="description" type="text" class="validate">
+                                <label for="description">Description (max 350 characters)</label>
+                                <span class="helper-text" data-error="wrong" data-success="right"></span>
+                            </div>
+                        </div>
+                        <div class="fixed-action-btn">
+                            <button class="btn-floating waves-effect btn-large hsk-red">
+                                <i class="material-icons">save</i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {% include 'template/footer-online.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/general.js"></script>
+{% endblock %}

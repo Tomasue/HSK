@@ -1,0 +1,66 @@
+{% extends 'template/base.twig' %}
+{% set title = '' %}
+{% for info in getInfo %}
+    {% set title =  info.name  %}
+{% endfor %}
+{% block styles %}
+    <link href="/css/materializeaddons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    {% include 'template/header.twig' %}
+
+    <main>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col s12">
+                        <div class="card-panel">
+                            <table class="responsive-table highlight centered">
+                                <thead>
+                                    <tr>
+                                        <th>Korps</th>
+                                        <th>Start år</th>
+                                        <th>Slutt år</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for band in bands %}
+                                        <tr class="row-clickable">
+                                            <td>{% if band.type == 0 %} Hovedkorpset {% elseif band.type == 1 %} Juniorkorpset {% elseif band.type == 2 %} Aspirant {% endif %}</td>
+                                            <td>{{ band.start|date('d-m-Y') }}</td>
+                                            <td>{{ band.end|date('d-m-Y') }}</td>
+                                            <td><a href="/join/band/{{ band.id }}" class="btn-small">Bli med</a></td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {% include 'template/footer-online.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/general.js"></script>
+
+{% endblock %}
+
+
+
+
+
+
+

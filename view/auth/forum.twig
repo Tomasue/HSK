@@ -1,0 +1,68 @@
+{% extends 'template/base.twig' %}
+{% set title = 'Forum' %}
+{% block styles %}
+    <link href="/css/materializeaddons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    {% include 'template/header.twig' %}
+
+    <main class="grey lighten-5">
+        <div class="section">
+            <div class="container">
+
+                <div class="row z-depth-2">
+                    <div class="col s4" style="padding: 0;">
+                        <div class="card-panel">
+                            <div class="center">
+                                <h4>Viktig info</h4>
+                            </div>
+                        </div>
+                        <div class="title" style="border-bottom: 2px rgba(0, 0, 0, 0.1) solid; padding: 5px 10px;">
+                            <h5 style="margin: 0; font-weight: bold;">{{ p.title }}</h5>
+                        </div>
+                        <div class="info-title" style="padding: 10px 10px;">
+                            <p class="">{{ p.posted_by }} ▶  {% if p.posted_to == 0 %} <span>Felles</span> {% elseif p.posted_to == 1 %} <span>Hoved</span> {% elseif p.posted_to == 2 %} <span>Junior</span> {% elseif p.posted_to == 3 %} <span>Aspirant</span> {% endif %}</p>
+                        </div>
+                        <div class="content" style="padding: 10px 10px;">
+                            <p>{{ p.description }}</p>
+                        </div>
+                        <div class="posted" style="border-top: 2px rgba(0, 0, 0, 0.1) solid; padding: 10px 10px;">
+                            <p>{{ p.created_at|date("F jS \\a\\t g:ia") }} </p>
+                        </div>
+                    </div>
+                    <div class="col s4">
+                        <div class="card-panel">
+                             <div class="center">
+                                  <h4>Committe</h4>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixed-action-btn">
+                    <a class="btn-floating waves-effect btn-large hsk-red" href="/admin/forum-add">
+                        <i class="material-icons">add</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {% include 'template/footer-online.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/general.js"></script>
+{% endblock %}
+
+
+
+
+
+
+

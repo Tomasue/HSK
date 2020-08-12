@@ -1,0 +1,16 @@
+.auth-back {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('/img/omoss2.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    margin: 0;
+}
+
+.login {
+    background-color: white;
+    width: 900px;
+    padding: 10px;
+}

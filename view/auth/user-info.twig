@@ -1,0 +1,118 @@
+{% extends 'template/base.twig' %}
+{% set title = '' %}
+{% for i in info %}
+    {% set title =  i.name  %}
+{% endfor %}
+{% block styles %}
+    <link href="/css/materializeaddons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    {% include 'template/header.twig' %}
+    {% for i in info %}
+    <main>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col s6">
+                        <div class="card-panel">
+                            <div class="center-align">
+                                <h4>Musikant</h4>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <p>Navn: {{ i.name }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <p>Type: {% if i.type == 0 %} Korpsmedlem {% elseif i.type == 1 %} Forelder til _Musikant_Navn {% elseif i.type == 2 %} Admin (Styret)/ Dirigent {% endif %}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <p>Fødselsdag: {% if i.birth_date != null %} {{ i.birth_date }} {% else %} Ikke lagt til {% endif %}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <p>Address: {% if i.address != null %} {{ i.address }} {% else %} Ikke lagt til {% endif %}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <p>Email: {{ i.email }} </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <p>TLF: {% if i.number != null %} {{ i.number }} {% else %} Ikke lagt til {% endif %}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <p>Korps: {% if band.type == 0 %} Hovedkorpset {% elseif band.type == 1 %} Juniorkorpset {% elseif band.type == 2 %} Aspirant {% endif %} </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <p>Mangler du informasjon eller har ny info?</p>
+                                    <a href="/user-info/update" class="btn-small">Legg til mer / Rediger</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="col s6">
+                        <div class="card-panel">
+                            <h4 class="center-align">Korps</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    {% for b in band %}
+                                    {% if b|length <= 0 %}
+                                    <p>Er du ikke medlem til i et korps?</p>
+                                    <a href="/bands/show" class="btn-small">Bli med i et korps</a>
+                                    {% elseif b|length > 0  %}
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Korps</th>
+                                                    <th>Ble med</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>{% if b.type == 0 %} Hovedkorpset {% elseif b.type == 1 %} Juniorkorpset {% elseif b.type == 2 %} Aspirant {% endif %}</td>
+                                                    <td>{{ b.created_at|date('F jS \\a\\t g:ia') }}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {% include 'template/footer-online.twig' %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/general.js"></script>
+
+{% endblock %}
+
+
+
+
+
+
+
